@@ -21,6 +21,8 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'pry'
+  gem 'launchy'
+  #save_and_open_page - triggers launchy in capybara specs.
 end
 
 group :test do

@@ -1,3 +1,3 @@
-class Question <ActiveRecord::Base
+class Question < ActiveRecord::Base
   validates :inquiry, :presence => true
 end

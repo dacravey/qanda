@@ -19,6 +19,7 @@ class QuestionsController <ApplicationController
 
   def edit
     @question = Question.find(params[:id])
+    flash[:notice] = "Your question has been edited successfully"
   end
 
   def show

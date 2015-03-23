@@ -1,0 +1,10 @@
+<h1>Questions</h1>
+
+<ul>
+  <% @questions.each do |q| %>
+    <li><%= link_to q.inquiry, question_path(q) %></li>
+  <% end %>
+</ul>
+
+<%= link_to new_question_path do %>Add a Question
+<% end %>

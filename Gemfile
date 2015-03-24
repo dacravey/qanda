@@ -9,12 +9,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'factory_girl_rails'
+gem 'devise'
 
 group :development do
   gem 'byebug'
   gem 'web-console'
   gem 'spring'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 group :test, :development do

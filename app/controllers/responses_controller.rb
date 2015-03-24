@@ -1,4 +1,7 @@
 class ResponsesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
+
+
   def new
     @question = Question.find(params[:question_id])
     @response = @question.responses.new

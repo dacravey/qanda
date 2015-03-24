@@ -3,3 +3,9 @@
   font-size: 4em;
   font-family: 'Kameron', serif;
 }
+
+#user_nav {
+  float: right;
+  margin: 10px;
+  padding: 10px;
+}

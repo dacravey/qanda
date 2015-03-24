@@ -6,7 +6,6 @@ class QuestionsController <ApplicationController
   end
 
   def create
-    @user = User.find(params[:id])
     @question = Question.new(questions_params)
     if @question.save
       flash[:notice] = "Question Saved"

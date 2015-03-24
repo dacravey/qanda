@@ -19,7 +19,6 @@ class QuestionsController <ApplicationController
 
   def edit
     @question = Question.find(params[:id])
-    flash[:notice] = "Your question has been edited successfully"
   end
 
   def show
@@ -29,6 +28,7 @@ class QuestionsController <ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update(questions_params)
+    flash[:notice] = "Your question has been edited successfully"
       redirect_to questions_path
     else
       render :edit

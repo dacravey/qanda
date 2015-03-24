@@ -2,6 +2,9 @@ require 'rails_helper'
 
 describe "the add a response process" do
   it "adds a new response" do
+    visit questions_path
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'
@@ -11,6 +14,9 @@ describe "the add a response process" do
   end
 
   it "gives error when no answeris entered" do
+    visit questions_path
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'

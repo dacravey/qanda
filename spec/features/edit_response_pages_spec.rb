@@ -3,6 +3,9 @@ require 'rails_helper'
 describe "the edit a response process" do
 
   it "edits a response" do
+    visit questions_path
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'
@@ -14,6 +17,9 @@ describe "the edit a response process" do
   end
 
   it "gives error when no answer is entered" do
+    visit questions_path
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'

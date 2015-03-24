@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "the delete a response process" do
 
   it "deletes a response" do
-    question = Question.create(:inquiry => 'My First Question', :tag => 'Ruby')
+    question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'
     fill_in 'Answer', :with => 'My first answer'

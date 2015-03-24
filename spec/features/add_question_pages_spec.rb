@@ -17,7 +17,7 @@ describe "the add a question process" do
   end
 
   it "edits a question" do
-    question = Question.create(:inquiry => 'What color is grass?', :tag => 'Ruby')
+    question = FactoryGirl.create(:question)
     visit edit_question_path(question)
     # save_and_open_page
     fill_in 'Inquiry', :with => 'My First question'

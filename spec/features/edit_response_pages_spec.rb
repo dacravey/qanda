@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "the edit a response process" do
 
   it "edits a response" do
-    question = Question.create(:inquiry => 'My First Question', :tag => 'Ruby')
+    question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'
     fill_in 'Answer', :with => 'My first answer'
@@ -14,7 +14,7 @@ describe "the edit a response process" do
   end
 
   it "gives error when no answer is entered" do
-    question = Question.create(:inquiry => 'My First Question', :tag => 'Ruby')
+    question = FactoryGirl.create(:question)
     visit question_path(question)
     click_on 'Add a response'
     fill_in 'Answer', :with => 'My second answer'

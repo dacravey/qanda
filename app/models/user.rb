@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   after_create :send_welcome_email
-
+  has_many :questions
+  # attr_accessible :email, :password, :password_confirmation, :remember_me, :username
+  validates_presence_of :username
   private
 
   def send_welcome_email

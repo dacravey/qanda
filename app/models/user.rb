@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   private
 
   def send_welcome_email
-    UserMailer.signup_confirmation(self).deliver
+    UserMailer.signup_confirmation(self).deliver_now
   end
 end

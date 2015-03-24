@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "admin@QuandA.com"
+  default from: "admin@quanda.com", to: "user@example.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

@@ -23,7 +23,7 @@ class ResponsesController < ApplicationController
   def update
     @question = Question.find(params[:question_id])
     @response = Response.find(params[:id])
-    if @response.update(params[:response])
+    if @response.update(response_params)
       flash[:notice] = "Response successfully updated!"
       redirect_to questions_path(@response.question)
     else

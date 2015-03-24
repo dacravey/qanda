@@ -1,6 +1,9 @@
 <%= render "layouts/errors", :object => @question %>
+
 <%= form_for @question do |f| %>
   <%= f.label :inquiry %>
   <%= f.text_field :inquiry %>
+  <%= f.label :tag %>
+  <%= f.text_field :tag %>
   <%= f.submit "???" %>
 <% end %>

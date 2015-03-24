@@ -5,6 +5,7 @@ describe "the add a question process" do
     visit questions_path
     click_on 'Add a Question'
     fill_in 'Inquiry', :with => 'What color is grass?'
+    fill_in 'Tag', :with => 'Ruby'
     click_on '???'
     expect(page).to have_content 'Saved'
   end
@@ -16,7 +17,7 @@ describe "the add a question process" do
   end
 
   it "edits a question" do
-    question = Question.create(:inquiry => 'What color is grass?')
+    question = Question.create(:inquiry => 'What color is grass?', :tag => 'Ruby')
     visit edit_question_path(question)
     # save_and_open_page
     fill_in 'Inquiry', :with => 'My First question'

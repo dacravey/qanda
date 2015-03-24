@@ -38,11 +38,8 @@ class ResponsesController < ApplicationController
     flash[:notice] = "Response successfully deleted!"
   end
 
-  private
+private
     def response_params
       params.require(:response).permit(:answer)
     end
-  end
-
-
 end
